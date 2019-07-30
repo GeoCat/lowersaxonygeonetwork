@@ -1,0 +1,99 @@
+<ul class="list-group gn-resultview gn-resultview-sumup clearfix">
+  <li class="list-group-item gn-grid gn-list"
+      data-ng-repeat="md in searchResults.records"
+      data-gn-fix-mdlinks=""
+      data-gn-displayextent-onhover=""
+      data-gn-zoomto-onclick="">
+
+    <!--start top row-->
+    <div class="pull-right">
+
+      <!--Source catalog Logo-->
+      <a data-ng-if="md.groupWebsite"
+         href="{{md.groupWebsite}}" target="_blank">
+        <img data-ng-src="{{gnUrl}}..{{md.logo}}"
+             alt="{{'siteLogo' | translate}}"
+             class="gn-source-logo"/>
+      </a>
+      <img data-ng-if="!md.groupWebsite"
+           data-ng-src="{{gnUrl}}..{{md.logo}}"
+           alt="{{'siteLogo' | translate}}"
+           class="gn-source-logo"/>
+    </div>
+    <!--end top row-->
+
+    <div class="row gn-md-title"
+         data-ng-click="openRecord($index, md, searchResults.records)">
+      <h3>
+        <a data-ng-href="#/metadata/{{md.getUuid()}}"
+           title="{{md.title || md.defaultTitle}}">
+          {{(md.title || md.defaultTitle) | characters:80}}</a>
+      </h3>
+    </div>
+
+    <!--start middle row-->
+    <div title="{{(md.abstract || md.defaultAbstract) | striptags}}"
+         class="clearfix">
+      <!-- Thumbnail -->
+      <div class="gn-md-thumbnail"
+           data-ng-click="openRecord($index, md, searchResults.records)"
+           data-ng-class="{'gn-md-no-thumbnail': !md.getThumbnails().list[0].url}">
+        <img class="gn-img-thumbnail"
+             alt="{{md.title || md.defaultTitle}}"
+             data-ng-src="{{md.getThumbnails().list[0].url}}"
+             data-ng-if="md.getThumbnails().list[0].url"/>
+
+      </div>
+      <div class="gn-md-abstract">
+        <p class="text-justify"
+           data-ng-click="openRecord($index, md, searchResults.records)"
+           dd-text-collapse dd-text-collapse-max-length="350"
+           dd-text-collapse-text="{{md.abstract || md.defaultAbstract}}"></p>
+        <!-- organization -->
+        <div ng-if="md.getContacts().metadata">
+          <b translate="">organisation</b>: {{md.getContacts().metadata}}<br/>
+        </div>
+        <!-- dates -->
+        <div data-ng-show="md.revisionDate">
+          <b data-translate="">revisionDate</b>:
+          <span data-gn-humanize-time="{{md.revisionDate|empty}}" data-from-now="" data-format="YYYY-MM-DD"></span>
+        </div>
+        <div data-ng-show="!md.revisionDate&&md.creationDate">
+          <b data-translate="">creationDate</b>:
+          <span data-gn-humanize-time="{{md.creationDate|empty}}" data-from-now="" data-format="YYYY-MM-DD"></span>
+        </div>
+        <div data-ng-show="!md.revisionDate&&!md.creationDate&&md.publicationDate">
+          <b data-translate="">publicationDate</b>: 
+          <span data-gn-humanize-time="{{md.publicationDate|empty}}" data-from-now="" data-format="YYYY-MM-DD"></span>
+        </div>
+        <!-- keywords -->
+        <div class="gn-md-keywords" data-ng-if="md.keyword.length > 0">
+          <b data-translate="">Keywords</b>:
+          <span class="gn-md-keyword" data-ng-repeat="k in md.keyword">{{k | translate}}</span>
+        </div>
+      </div>
+    </div>
+    <!--end middle row-->
+
+    <!--start bottom row-->
+    <div class="gn-md-footer clearfix">
+      <div data-gn-metadata-rate="md"
+           data-readonly="true"
+           class="gn-md-rating"/>
+      <div gn-grid-related gn-grid-related-uuid="::md.getUuid()"
+           template="../../catalog/views/niedersachsen/templates/gridRelated.html"></div>
+      <gn-links-btn></gn-links-btn>
+      <div class="gn-md-links">
+          <a data-ng-href="{{gnUrl}}api/records/{{md.getUuid()}}/formatters/xml"
+             class="btn btn-default"
+             target="_blank">
+            <i class="fa fa-fw fa-file-code-o"></i>
+            <span data-translate="">xmlView</span>
+          </a>
+        </div>
+    </div>
+
+    </div>
+
+  </li>
+</ul>

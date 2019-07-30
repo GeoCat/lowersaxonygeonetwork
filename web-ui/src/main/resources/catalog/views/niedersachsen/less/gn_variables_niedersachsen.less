@@ -1,0 +1,106 @@
+// list of LESS variables to be used in GeoNetwork
+// 
+// this file must be first on the list of @import
+
+// general
+@gn-spacing: 10px;
+
+// Niedersachsen
+@ns-main-color: #e50046;
+@ns-main-color-blue: #154176;
+
+// override Bootstrap variables
+@gray-light: #707070;
+@brand-primary: @gray-darker;
+
+// body background (image & color)
+// 
+// when there is an empty string, no background image is used.
+@gn-background-image: '../catalog/views/niedersachsen/images/topo-03.jpg';
+@gn-background-color: @body-bg;
+// header
+@gn-header-background: #fff;
+@gn-header-height: 70px;
+// menu bar
+@gn-menubar-background: @navbar-default-bg;
+@gn-menubar-background-active: @navbar-default-link-active-bg;
+@gn-menubar-color: #454545;
+@gn-menubar-color-hover: @navbar-default-link-hover-color;
+@gn-menubar-border-color: @navbar-default-border;
+@gn-menubar-min-height: 53px;
+// sub bar
+@gn-subbar-height: 52px;
+
+// bottombar
+@gn-bottombar-background: #878787;
+@gn-bottombar-border-color: #e7e7e7;
+@gn-bottombar-color: #fff; 
+@gn-bottombar-color-hover: #fff;
+
+// footer
+@gn-footer-background: #003366; 
+@gn-footer-color: #fff;
+@gn-footer-color-hover: #fff;
+@gn-footer-min-height: 266px;
+@gn-footer-menubar-min-height: 50px;
+
+// home page
+// 
+// ----- search input
+@gn-search-outline-color: @brand-primary;
+@gn-search-button-background-color: @brand-primary;
+@gn-search-button-color: @btn-primary-color;
+
+@gn-search-outline-color-red: red(@gn-search-outline-color);
+@gn-search-outline-color-green: green(@gn-search-outline-color);
+@gn-search-outline-color-blue: blue(@gn-search-outline-color);
+// ----- topics block
+@gn-topics-background-color: #fbfbfbe3;
+@gn-topics-color: #333;
+@gn-topics-color-hover: #000;
+// ----- info block
+@gn-info-background-color: #f1f1f1f0; // #f1f1f1; // @body-bg;
+// ----- resultcards
+@gn-resultcard-background-color: @body-bg;
+@gn-resultcard-title-background-color: @ns-main-color;
+@gn-resultcard-title-background-color-hover: darken(@gn-resultcard-title-background-color, 6.5%);
+@gn-resultcard-title-color: #fff;
+@gn-resultcard-title-border: 0px solid @navbar-default-border;
+
+// search results page
+@gn-results-background-color: @body-bg;
+
+// metadata page
+@gn-md-view-background-color: @body-bg;
+
+// search
+// 
+// on the search page
+@gn-search-color: #252525;
+@gn-search-background-color: #f1f1f1;
+@gn-search-min-height: 146px;
+
+// styling for the scrollbar
+.scrollbar() {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  // ----- track
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+  }
+  // ----- handle
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #e5e5e5; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.4); 
+  }
+}

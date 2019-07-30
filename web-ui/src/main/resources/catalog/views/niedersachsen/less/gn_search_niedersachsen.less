@@ -1,0 +1,466 @@
+@import "../../../style/gn_search.less";
+@import "../../../style/gn_metadata.less";
+@import "gn_facets_niedersachsen.less";
+@import "gn_pagination_niedersachsen.less";
+@import "gn_feedback_niedersachsen.less";
+// page layout
+@import "gn_layout_niedersachsen.less";
+// topics, categories and Inspire
+@import "gn_topics_niedersachsen.less";
+// navigation
+@import "gn_navbar_niedersachsen.less";
+// styling for a single result: metadata view
+@import "gn_result_niedersachsen.less";
+// styling for all search results
+@import "gn_results_niedersachsen.less";
+// main map and minimap
+@import "gn_map_niedersachsen.less";
+// footer and bottombar
+@import "gn_footer_niedersachsen.less";
+// infolists on the homepage
+@import "gn_infolist_niedersachsen.less";
+// variables for manipulating the theme
+@import "gn_variables_niedersachsen.less"; // must be last
+
+
+a {
+  color: #255986;
+}
+
+/* Hide the tabset selector because tab
+   switch is available in the top tool bar */
+#main-tabset > ul:nth-child(1) {
+  display: none;
+}
+
+.jumbotron {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+.gn-sort-by {
+  .btn-group > button {
+    .btn-link();
+  }
+}
+
+.gn-search-page {
+  clear: both;
+  flex-grow: 1;
+  position: relative;
+  // minimum height for search page, to position the footer at the bottom of the page
+  // 
+  // calculation as follows:
+  // 
+  // vertical height - height menubar - (height footer + bottombar)
+  // 
+  min-height: calc(~"100vh - @{gn-menubar-min-height} - @{gn-footer-min-height}");
+  .search-over {
+    color: @gn-menubar-color;
+  }
+  .badge {
+      margin-right: 5px;
+    }
+  .nav-pills {
+    margin-bottom: 1em;
+    text-align: center;
+    li {
+      display: inline-block;
+      float: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .badge {
+      margin-right: 5px;
+    }
+  }
+  // MD status
+  .gn-status {
+    background: rgb(99, 195, 224);
+    color: #fff;
+  }
+  .gn-status-completed {
+    background: #5cb85c;
+    border-color: #5cb85c;
+    color: #000;
+  }
+  .gn-status-mdview {
+    font-size: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 10px 0 0 0;
+    z-index: 10;
+    width: auto;
+    text-align: center;
+    transform: rotate(0);
+    padding: 4px 25px 7px 25px;
+    display: inline-block;
+    border-radius: 2px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    &:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content: "\f111";
+      margin-left: -15px;
+      margin-right: 10px;
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+}
+.gn-source-logo {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+// extra styling for the search buttons on the search boxes on 
+// the `home` and `search` page
+.btn-search {
+  border: 0;
+  margin-left: -50px !important;
+  z-index: 10 !important;
+  height: 44px;
+  background: transparent;
+}
+
+// search on home page
+.gn-row-main {
+  // .gn-form-any {
+  //   input.input-lg {
+  //     height: 46px;
+  //     border-radius: 0;
+  //     box-shadow: none;
+  //   }
+  //   .btn-default {
+  //     border-left: 0;
+  //   }
+  //   .dropdown-menu {
+  //     text-align: left;
+  //     border: 0;
+  //     margin-top: 0;
+  //     border-radius: 0;
+  //     padding-top: 0;
+  //     li {
+  //       a {
+  //         padding: 8px 18px;
+  //       }
+  //     }
+  //     .scrollbar();
+  //   }
+  // }
+  .gn-form-any {
+    input[type="text"], button {
+      height: 36px;
+    }
+    button.btn-lg, input[type="text"].input-lg {
+      height: 46px;
+    }
+    input[type="text"].input-lg {
+      &:focus {
+        border-color: @gn-search-outline-color;
+        box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgba(@gn-search-outline-color-red, @gn-search-outline-color-green, @gn-search-outline-color-blue, 0.6) 0px 0px 8px;
+      }
+    }
+    button.btn-primary.btn-lg {
+      background-color: @gn-search-button-background-color;
+      border-color: darken(@gn-search-button-background-color, 5%);
+      color: @gn-search-button-color;
+      &:hover {
+        background-color: darken(@gn-search-button-background-color, 10%);
+        border-color: darken(@gn-search-button-background-color, 15%);
+      }
+    }
+    .dropdown-menu > .active > a {
+      background-color: @gn-search-button-background-color;
+      color: @gn-search-button-color;
+    }
+  }
+}
+
+// search page
+[data-ng-search-form] {
+  .gn-top-search {
+    border-bottom: 1px solid @panel-default-border;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+    min-height: @gn-search-min-height;
+    [typeahead] {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    [typeahead-popup] {
+      text-align: left;
+      border: 0;
+      margin-top: 0;
+      border-radius: 0;
+      padding-top: 1px;
+      li {
+        a {
+          padding: 8px 18px;
+        }
+      }
+      .scrollbar();
+    }
+    .inner-spinner {
+      position: absolute;
+      top: 1.75em;
+      left: 50%;
+      margin-left: 64px;
+    }
+    .gn-form-any {
+      input[type="text"], button {
+        height: 36px;
+      }
+      button.btn-lg, input[type="text"].input-lg {
+        height: 47px;
+        box-shadow: none;
+      }
+      input[type="text"].input-lg {
+        border-color: #ddd;
+        border-radius: 0;
+        &:focus {
+          border-color: @gn-search-outline-color;
+          box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgba(@gn-search-outline-color-red, @gn-search-outline-color-green, @gn-search-outline-color-blue, 0.6) 0px 0px 8px;
+        }
+      }
+      .btn {
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .btn-reset {
+        background: #e22b2b;
+        border-color: #e22b2b;
+        color: #fff;
+      }
+      .btn-advanced {
+        background: #ececec;
+        border-color: #ececec;
+        font-size: 15px;
+        outline: 0;
+        height: 47px !important;
+      }
+    }
+    .gn-form-advanced {
+      background-color: #ececec;
+    }
+    .form-group {
+      margin: 0;
+    }
+    .btn-group-xs > .btn {
+      padding: 0;
+      margin-bottom: 2px;
+      font-size: 14px;
+      color: @gn-search-color;
+      font-weight: normal;
+    }
+    .gn-search-filter {
+      padding: 3px 0 10px 0;
+    }
+    .bootstrap-tagsinput {
+      .tagsinput-trigger {
+        top: auto;
+        right: 22px;
+        margin-top: -18px;
+      }
+      .tt-suggestion {
+        padding: 5px 10px;
+        border-left: 4px solid #fff;
+      }
+      .tt-suggestion.tt-is-under-cursor, .tt-suggestion:hover {
+        background-color: #fff;
+        color: #0097a7;
+        border-left: 4px solid #0097a7;
+      }
+    }
+    [data-gn-period-chooser] {
+      margin-bottom: 10px;
+      .col-md-6 {
+        padding-left: 0;
+      }
+      .form-control {
+        height: 32px;
+        &:focus {
+          border-color: @gn-search-outline-color;
+          box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgba(@gn-search-outline-color-red, @gn-search-outline-color-green, @gn-search-outline-color-blue, 0.6) 0px 0px 8px;
+        }
+      }
+    }
+  }
+  .gn-sub-bar {
+    .gn-top-search {
+      padding-bottom: 0;
+      padding-top: 0;
+      border: 0;
+      label {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .gn-search-facet {
+    padding-top: 15px;
+  }
+  .gn-search-toolbar {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    .btn-group.open .dropdown-toggle {
+      box-shadow: none;
+      border-color: #ddd;
+      background-color: #ddd;
+      text-decoration: none;
+    }
+  }
+  .gn-search-toolbar-bottom {
+    margin-bottom: 15px;
+    .btn-group.open .dropdown-toggle {
+      box-shadow: none;
+      border-color: #ddd;
+      background-color: #ddd;
+      text-decoration: none;
+    }
+  }
+  .loading {
+    position: absolute;
+    top: 1.8em;
+    font-size: 40px;
+    left: 46%;
+    text-shadow: 0 0 1px white;
+    z-index: 200;
+    background: rgba(255,255,255,.7);
+    border-radius: 1em;
+    padding: .2em;
+  }
+}
+
+.gn-search-filter {
+  padding: 5px;
+  .nav-pills li {
+    display: block;
+  }
+  div {
+    ul, div.tab-content {
+      float: left;
+    }
+    ul.nav {
+      width: 10vw;
+    }
+    div.tab-content {
+      width: 84vw;
+
+    }
+  }
+}
+
+.gn-row-filters {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  .gn-flfilter-icon {
+    text-align: center;
+    li {
+      list-style: none;
+      float: left;
+      width: 100px;
+    }
+    i {
+      //    .@{fa-css-prefix}-4x;
+      font-size: 4em;
+      width: 70px;
+      img {
+        width: 70px;
+      }
+    }
+  }
+}
+
+.gn-results-switch {
+  float: left;
+}
+
+/*
+  List of records
+ */
+.gn-info-list {
+  padding: 5px 0px;
+  margin: auto -10px;
+  li {
+    width: 33.3%;
+    zoom: 1;
+    list-style: none;
+    float: left;
+    padding: 10px;
+    > div {
+      margin: 0px;
+      padding: 15px;
+      height: 125px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-bottom: 2px solid #337ab7;
+      cursor: pointer;
+      > div.gn-md-thumbnail {
+        float:left;
+        width: 90px;
+        height: 90px;
+        margin-right: 15px;
+        //background-image: url(../catalog/views/default/images/no-thumbnail.png);
+        .gn-img-thumbnail {
+          max-height: 90px;
+          max-width: 90px;
+          margin-right: 15px;
+        }
+      }
+      > div.gn-md-title {
+        a {
+          color: #333333;
+          font-size: 120%;
+        }
+      }
+    }
+    div:nth-child(2) {
+      overflow: hidden;
+      max-height: 100%;
+      text-overflow: ellipsis;
+    }
+  }
+  li.gn-more {
+    position: relative;
+    float:right;
+  }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  ul.gn-resultview li.gn-grid {
+    width: calc(~"100% - 15px");
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+  ul.gn-resultview li.gn-grid {
+    width: calc(~"50% - 15px");
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+// @media (min-width: @screen-lg-min) {
+
+//   ul.gn-resultview li.gn-grid {
+//     //width: calc(~"33% - 15px");
+//   }
+// }
+
+@import "gn_view_niedersachsen.less";

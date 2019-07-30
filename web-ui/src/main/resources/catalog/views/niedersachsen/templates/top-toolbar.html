@@ -1,0 +1,148 @@
+<div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            title="{{'toggleNavigation' | translate}}"
+            aria-expanded="false"
+            aria-controls="navbar">
+      <span class="sr-only" data-translate>toggleNavigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li data-ng-if="gnCfg.mods.home.enabled">
+        <a data-gn-active-tb-item="{{gnCfg.mods.home.appUrl}}">
+          <img class="gn-logo"
+               data-ng-src="{{gnUrl}}../images/logos/{{info['system/site/siteId']}}.png?random{{info['system/site/lastUpdate']}}"/>
+          <span class="hidden-sm hidden-md">{{info['system/site/name']}}</span>
+        </a>
+      </li>
+      <li data-ng-if="gnCfg.mods.search.enabled">
+        <a data-gn-active-tb-item="{{gnCfg.mods.search.appUrl}}"
+           title="{{'search' | translate}}">
+          <span data-translate="">search</span>
+        </a>
+      </li>
+      <li data-ng-if="gnCfg.mods.map.enabled">
+        <a data-gn-active-tb-item="{{gnCfg.mods.map.appUrl}}"
+           title="{{'map' | translate}}">
+          <span data-translate="">makeYourMap</span>
+          <span data-gnv-layer-indicator=""/>
+        </a>
+      </li>
+
+      <li data-ng-if="gnCfg.mods.editor.enabled"
+          data-ng-show="authenticated && user.isEditorOrMore()">
+        <div class="btn-group">  
+          <a data-gn-active-tb-item="{{gnCfg.mods.editor.appUrl}}"
+             title="{{'editorBoard' | translate}}"
+             class="btn btn-link">
+            <span data-translate="">contribute</span>
+          </a>
+          <a href="" class="btn btn-link dropdown-toggle gn-nopadding-left" data-toggle="dropdown"
+             role="button" aria-expanded="false"><span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a data-gn-active-tb-item="{{gnCfg.mods.editor.appUrl}}#/create">
+                <span data-translate="">addRecord</span>
+              </a>
+            </li>
+            <li>
+              <a data-gn-active-tb-item="{{gnCfg.mods.editor.appUrl}}#/import">
+                <span data-translate="">ImportRecord</span>
+              </a>
+            </li>
+            <li>
+              <a data-gn-active-tb-item="{{gnCfg.mods.editor.appUrl}}#/directory"
+                 data-ng-if="user.isReviewerOrMore()">
+                <span data-translate="">directoryManager</span>
+              </a>
+            </li>
+            <li>
+              <a data-gn-active-tb-item="catalog.edit#/batchedit"
+                 data-ng-if="user.isReviewerOrMore()">
+                <span data-translate="">batchEditing</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li data-ng-show="user.isUserAdminOrMore()">
+        <div class="btn-group"> 
+          <a data-gn-active-tb-item="admin.console"
+             title="{{'adminConsole' | translate}}"
+             class="btn btn-link">
+            <span data-translate="">adminConsole</span>
+          </a>
+          <span data-ng-show="user.isUserAdminOrMore() && viewMenuAdmin">
+            <a href="" class="btn btn-link dropdown-toggle gn-nopadding-left" data-toggle="dropdown"
+               role="button" aria-expanded="false"><span class="caret"></span>
+            </a>
+            <ul data-ng-if="user.isUserAdmin()" class="dropdown-menu" role="menu">
+              <li data-ng-repeat="t in userAdminMenu">
+                <a data-gn-active-tb-item="admin.console{{t.route}}">
+                  <span data-translate="">{{t.name | translate}}</span>
+                </a>
+              </li>
+            </ul>
+            <ul data-ng-if="user.isAdministrator()" class="dropdown-menu" role="menu">
+              <li data-ng-repeat="t in adminMenu">
+                <a data-gn-active-tb-item="{{gnCfg.mods.admin.appUrl}}{{t.route}}">
+                  <span data-translate="">{{t.name | translate}}</span>
+                </a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+
+
+    <form class="navbar-form navbar-right" role="language">
+      <div class="form-group pull-right"
+           data-gn-language-switcher="lang"
+           data-langs="langs"
+           data-lang-labels="langLabels"/>
+    </form>
+
+    <ul data-ng-if="gnCfg.mods.signin.enabled"
+        class="nav navbar-nav navbar-right">
+      <li data-ng-show="authenticated">
+        <a data-gn-active-tb-item="{{gnCfg.mods.admin.appUrl}}#/organization/users?userOrGroup={{user.username}}"
+           title="{{'userDetails' | translate}}"
+           class="hidden-xs btn btn-link">
+          <img class="img-circle"
+               data-ng-src="//gravatar.com/avatar/{{user.email | md5}}?s=18"/>
+          <span class="hidden-sm">{{user.name}} {{user.surname}} ({{user.profile | translate}})</span>     
+          
+          <span class="alert alert-danger ng-hide"
+                data-ng-show="session.remainingTime > 0 &&
+                    session.remainingTime < session.alertInTitleWhen"
+                data-translate=""
+                data-translate-values="{remainingTime: '{{session.remainingTime}}'}">
+            sessionWillExpireIn
+          </span>
+        </a>
+      </li>
+      <li data-ng-show="authenticated">
+        <a href="{{gnCfg.mods.signout.appUrl}}"
+           title="{{'signout' | translate}}">
+          {{'signout' | translate}}
+        </a>
+      </li>
+      <li data-ng-show="!authenticated && service !== 'catalog.signin'">
+        <a href="{{gnCfg.mods.signin.appUrl | signInLink}}"
+           title="{{'signIn'|translate}}"
+           data-ng-keypress="$event">
+          {{'signIn' | translate}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

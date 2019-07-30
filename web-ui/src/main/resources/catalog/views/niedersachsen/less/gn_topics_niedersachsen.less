@@ -1,0 +1,134 @@
+@import "../../../style/gn_search.less";
+// variables for manipulating the theme
+@import "gn_variables_niedersachsen.less"; // must be last
+
+// ----- topics
+.gn-row-topics {
+  background-color: @gn-topics-background-color;
+  padding: 30px 20px 40px 20px;
+  h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    label {
+      margin-bottom: 0;
+    }
+  }
+  .row {
+    .row  {
+      span {
+        padding-left: 0;
+      }
+    }
+  }
+  // #chips-card {
+  //   padding-bottom: 0px;
+  // }
+}
+
+// badges
+// 
+// ----- image/icon
+.badge-result {
+  border-radius: 0 !important;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: bottom;
+  width: auto;
+  font-size: 14px;
+  background: transparent;
+  a {
+    color: @gn-topics-color;
+    border-radius: 20px;
+    &:hover {
+      text-decoration: underline;
+      color: @gn-topics-color-hover;
+      .badge-text {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// ----- colors
+.badge-result-topic a {
+  background: transparent;
+  &:hover {
+    background: transparent; 
+  }
+}
+.badge-icon {
+  i {
+    color: @gn-topics-color;
+    line-height: 40px;
+  }
+}
+
+// ----- icon
+.badge-icon {
+  font-size: 10px;
+  color: @gn-topics-color;
+  background: transparent;
+  width: 40px;
+  display: block;
+  padding: 0;
+  border-radius: 50%;
+  line-height: 50px;
+  min-width: 0;
+}
+// ----- text
+.badge-text {
+  height: 100%;
+  line-height: 110%;
+  padding-left: 8px;
+  padding-right: 4px;
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 12vw;
+  white-space: nowrap;
+  color: @gn-topics-color;
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .gn-row-topics {
+    .badge-text {
+      max-width: 34vw;
+    }
+  }
+  .container {
+    .gn-row-topics {
+      .badge-text {
+        max-width: 26vw;
+      }
+    }
+  }
+}
+@media (max-width: @screen-xs-max) {
+  .gn-row-topics {
+    padding: 30px 0px;
+    .badge-text {
+      max-width: 56vw;
+    }
+  }
+  .container {
+    .gn-row-topics { 
+      .badge-text {
+        max-width: 48vw;
+      }
+    }
+  }
+}
+@media (min-width: @screen-lg-min) {
+  .gn-row-topics {
+    .badge-text {
+      max-width: 10vw;
+    }
+  }
+  .container {
+    .gn-row-topics { 
+      .badge-text {
+        max-width: 10vw;
+      }
+    }
+  }
+}

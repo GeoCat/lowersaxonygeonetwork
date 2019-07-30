@@ -1,0 +1,20 @@
+/* Defined here any custom style for the view
+   which has to be applied for all apps
+   (ie. admin, search, login, editor). */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body, html {
+  font-family: 'Frutiger W01', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+// import default view styles
+@import "../../default/less/gn_view.less";
+
+// margin for small devices
+@media (max-width: 750px) {
+  .gn-xs-margin-bottom {
+    margin-bottom: @gn-spacing !important;
+  }
+}

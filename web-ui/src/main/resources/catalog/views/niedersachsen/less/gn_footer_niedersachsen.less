@@ -1,0 +1,77 @@
+@import "../../../style/gn_bootstrap.less"; // must be first
+// variables for manipulating the theme
+@import "gn_variables_niedersachsen.less"; // must be last
+
+.gn-footer-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block !important;
+}
+.gn-footer-text > span {
+  padding-right: 5px;
+  padding-left: 15px;
+  color: #777;
+}
+.socialmedia {
+  margin-top: 15px;
+  margin-right: 15px;
+  display: inline-block !important;
+}
+.socialmedia a {
+  margin-top: 15px;
+  display:inline !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  color: #777;
+}
+
+/*
+    Place bottom-bar at the bottom of page; approach is based on http://matthewjamestaylor.com/blog/bottom-footer-demo.htm
+*/
+.gn-bottom-bar {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-width: 0;
+  background: @gn-bottombar-background;
+  border-color: @gn-bottombar-border-color;
+  .gn-footer-text > span {
+    color: @gn-bottombar-color !important;
+  }
+  a {
+    color: @gn-bottombar-color !important;
+    &:hover {
+      color: @gn-bottombar-color-hover !important;
+    }
+  }
+}
+
+.gn-row-footer {
+  background: @gn-footer-background;
+  color: @gn-footer-color;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  p {
+    width: 90%;
+    padding: 3px 0 3px 0;
+  }
+  ul {
+    padding: 0px 15px 0 0;
+    list-style: none;
+  }
+  li {
+    padding: 3px 3px 3px 0;
+  }
+  a {
+    color: @gn-footer-color !important;
+    &:hover {
+      color: @gn-footer-color-hover !important;
+    }
+  }
+}
