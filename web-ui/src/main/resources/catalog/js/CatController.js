@@ -68,15 +68,15 @@ goog.require('gn_alert');
       },
       'mods': {
         'global': {
-          'humanizeDates': true
+          'humanizeDates': false
         },
         'header': {
           'enabled': true,
           'languages': {
+            'ger': 'de',
             'eng': 'en',
             'dut': 'nl',
             'fre': 'fr',
-            'ger': 'de',
             'kor': 'ko',
             'spa': 'es',
             'cze': 'cs',
@@ -88,7 +88,7 @@ goog.require('gn_alert');
             'chi': 'zh',
             'slo': 'sk'
           },
-          'isLogoInHeader': false,
+          'isLogoInHeader': true,
           'logoInHeaderPosition': 'left'
         },
         'home': {
@@ -141,8 +141,8 @@ goog.require('gn_alert');
           'sortBy': 'relevance',
           'resultViewTpls': [{
             'tplUrl': '../../catalog/components/' +
-                'search/resultsview/partials/viewtemplates/grid.html',
-            'tooltip': 'Grid',
+                '../../catalog/views/niedersachsen/templates/list.html',
+            'tooltip': 'List',
             'icon': 'fa-th'
           },{
             'tplUrl': '../../catalog/components/' +
@@ -151,7 +151,7 @@ goog.require('gn_alert');
             'icon': 'fa-bars'
           }],
           'resultTemplate': '../../catalog/components/' +
-              'search/resultsview/partials/viewtemplates/grid.html',
+              '../../catalog/views/niedersachsen/templates/list.html',
           'formatter': {
             'list': [{
               'label': 'defaultView',

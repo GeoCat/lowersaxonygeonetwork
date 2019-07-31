@@ -738,3 +738,8 @@ INSERT INTO GUF_RatingCriteria (id, name, isinternal) VALUES (1, 'Discoverabilit
 INSERT INTO GUF_RatingCriteria (id, name, isinternal) VALUES (2, 'Readability', 'n');
 INSERT INTO GUF_RatingCriteria (id, name, isinternal) VALUES (3, 'DataQuality', 'n');
 INSERT INTO GUF_RatingCriteria (id, name, isinternal) VALUES (4, 'ServiceQuality', 'n');
+
+-- System tuning for NiederSachsen
+UPDATE Settings SET value='niedersachsen' WHERE name='system/ui/defaultView';
+UPDATE Settings SET value='off' WHERE name='system/localrating/enable';
+UPDATE Settings SET value='false' WHERE name='metadata/workflow/enable';
