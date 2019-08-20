@@ -32,11 +32,15 @@
            data-ng-show="activeTab == '/home'"/>
       <div data-ng-include="'../../catalog/views/niedersachsen/templates/results.html'"
            data-ng-show="activeTab == '/search'"/>
-      <div data-ng-if="isMapViewerEnabled"
+      <div data-ng-if="isMapViewerEnabled && !isExternalViewerEnabled"
            data-ng-include="'../../catalog/views/niedersachsen/templates/map.html'"
            data-ng-show="activeTab == '/map'"/>
       <div data-ng-include="'../../catalog/views/niedersachsen/templates/recordView.html'"
-           data-ng-show="activeTab == '/metadata'"/>
+           data-ng-show="activeTab == '/metadata'" class="gn-view-approved"/>
+      <div data-ng-include="'../../catalog/views/niedersachsen/templates/recordView.html'"
+           data-ng-show="activeTab == '/metadraf'" class="gn-view-not-approved"/>
+      <div data-ng-include="'../../catalog/views/niedersachsen/templates/page.html'"
+           data-ng-if="activeTab == '/page'"/>
     </div>
   </div>
 </div>
