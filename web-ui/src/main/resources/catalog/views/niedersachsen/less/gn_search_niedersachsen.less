@@ -236,9 +236,13 @@ a {
         box-shadow: none;
       }
       .btn-reset {
-        background: #e22b2b;
-        border-color: #e22b2b;
-        color: #fff;
+        background-color: @gn-search-button-background-color;
+        border-color: darken(@gn-search-button-background-color, 5%);
+        color: @gn-search-button-color;
+        &:hover {
+          background-color: darken(@gn-search-button-background-color, 10%);
+          border-color: darken(@gn-search-button-background-color, 15%);
+        }
       }
       .btn-advanced {
         background: #ececec;
