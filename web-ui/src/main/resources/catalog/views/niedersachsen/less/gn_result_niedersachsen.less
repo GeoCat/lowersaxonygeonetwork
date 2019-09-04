@@ -37,6 +37,9 @@
     }
   }
   .gn-metadata-display {
+    h2 {
+      background-color: #fff;
+    }
     .gn-record {
       h1 {
         font-size: 24px;
@@ -132,10 +135,33 @@
   }
   .entry {
     margin-left: 1em;
-    border-left: 2px solid #eeeeee;
-    padding-left: 5px;
-    dl {
+    border-left: 1px dotted #b3b3b3;
+    padding-left: 10px;
+    h2 {
+      margin-left: -20px;
+      background: #fff;
       padding-bottom: 5px;
+      margin-bottom: 0;
+    }
+    .gn-contact {
+      h2 {
+        i {
+          display: none;
+        }
+      }
+    }
+    dl {
+      padding-top: 5px;
+      padding-bottom: 10px;
+      dd {
+        ul {
+          padding-left: 20px;
+          padding-top: 5px;
+        }
+      }
+    }
+    .entry {
+      margin-left: 10px;
     }
   }
   input[readonly] {
