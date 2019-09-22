@@ -226,9 +226,9 @@
         <value>java:v370.HumanizeDatesUiMigration</value>
       </list>
     </entry>
-    <entry key="3.8.0">
+    <entry key="3.8.1">
       <list>
-        <value>WEB-INF/classes/setup/sql/migrate/v380/migrate-</value>
+        <value>WEB-INF/classes/setup/sql/migrate/v381/migrate-</value>
       </list>
     </entry>
   </util:map>

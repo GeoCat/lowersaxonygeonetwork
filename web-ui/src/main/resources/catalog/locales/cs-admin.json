@@ -1283,6 +1283,11 @@
     "restoreDefaultSettings": "Obnovit výchozí nastavení",
     "restoreDefaultStyleConfirm": "Potvrďte, chcete-li obnovit výchozí hodnoty výchozího stylu. Aktuální změny budou ztraceny.",
     "gnUploadCssStyle": "Nahrajte soubor stylu JSON",
+    "record-links": "Záznam analýzy odkazů",
+    "recordLinksDashboard": "Záznam analýzy odkazů",
+    "recordLinksDashboardSubtitle": "Zde jsou uvedeny všechny analyzované odkazy na záznamy. Pro každý odkaz je k dispozici historie všech kontrol.",
+    "lastCheck": "Poslední kontrola",
+    "associatedRecords": "Přidružené záznamy",
     "wfs-indexing": "Indexování WFS",
     "wfsIndexingTitle": "Dashboard pro WFS indexaci ",
     "wfsIndexingSubtitle": "Zde jsou uvedeny průběžné a dokončené úlohy pro indexování funkcí ze vzdálených služeb WFS. Po indexování mohou být funkce filtrovány podle jejich atributů a filtru aplikovaného na původní vrstvu mapy.",
@@ -1402,5 +1407,11 @@
     "gnSearchCss": "Vyhledávací pole",
     "styleVariable-gnSearchOutlineColor": "Barva ohraničení, když má vyhledávací pole fokus",
     "styleVariable-gnSearchButtonBackgroundColor": "Barva pozadí pro tlačítko Hledat",
-    "styleVariable-gnSearchButtonColor": "Barva textu pro tlačítko hledání"
+    "styleVariable-gnSearchButtonColor": "Barva textu pro tlačítko hledání",
+    "analyzeLinks": "Analyzovat všechny záznamy",
+    "analyzeLinks-help": "U všech záznamů v katalogu extrahovat odkazy a analyzovat stav URL.",
+    "refreshLinks": "Obnovit",
+    "removeAllLinksAndStatus": "Odstranit vše",
+    "removeAllLinksAndStatusConfirm": "Opravdu chcete odstranit všechny odkazy a historii stavu?",
+    "moreLinks": "Další odkazy ..."
 }

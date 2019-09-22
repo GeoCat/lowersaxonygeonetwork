@@ -1283,6 +1283,11 @@
     "restoreDefaultSettings": "기본 설정 복원",
     "restoreDefaultStyleConfirm": "Confirm to restore default default style values. Current changes will be lost.",
     "gnUploadCssStyle": "JSON 스타일 파일 업로드",
+    "record-links": "Record links analysis",
+    "recordLinksDashboard": "Record links analysis",
+    "recordLinksDashboardSubtitle": "Here are listed all record links analyzed. For each link, the history of all checks is provided.",
+    "lastCheck": "Last check",
+    "associatedRecords": "Associated records",
     "wfs-indexing": "WFS 색인",
     "wfsIndexingTitle": "WFS 색인 대시보드",
     "wfsIndexingSubtitle": "다음은 원격 WFS 서비스에서 피어를 색인화하기 위해 진행중이거나 완료된 작업입니다. 색인을 생성하면 원래 지도 레이어에 적용된 속성 및 필터에 따라 피처를 필터링할 수 있습니다.",
@@ -1402,5 +1407,11 @@
     "gnSearchCss": "Search Box",
     "styleVariable-gnSearchOutlineColor": "Border color for when the search box has the focus",
     "styleVariable-gnSearchButtonBackgroundColor": "Background color for the search button",
-    "styleVariable-gnSearchButtonColor": "Text color for the search button"
+    "styleVariable-gnSearchButtonColor": "Text color for the search button",
+    "analyzeLinks": "Analyze all records",
+    "analyzeLinks-help": "For all records in the catalogue, extract links and analyze URL status.",
+    "refreshLinks": "새로고치기",
+    "removeAllLinksAndStatus": "Remove all",
+    "removeAllLinksAndStatusConfirm": "Are you sure to remove all links and status history?",
+    "moreLinks": "More links ..."
 }
