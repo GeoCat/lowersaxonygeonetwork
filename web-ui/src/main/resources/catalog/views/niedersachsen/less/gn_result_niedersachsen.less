@@ -78,24 +78,43 @@
       background-color: #fff;
     }
   }
+  .gn-related-container {
+    margin-top: -1px;
+    h2 {
+      display: none;
+    }
+  }
   .gn-related-item {
     margin-top: -1px;
     border-radius: 0;
     padding: 10px 15px 10px 15px;
     .fa {
-      font-size: 16px;
+      font-size: 20px;
     }
     .fa-globe {
       font-size: 2.5em;
     }
     .fa-stack-1x {
-        margin-top: 2em;
-        strong {
-          font-size: 12px !important;
-          font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-          font-weight: 400;
-        }
+      margin-top: 2em;
+      strong {
+        font-size: 12px !important;
+        font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
       }
+    }
+    .gn-related-title {
+      display: block;
+    }
+    .gn-related-description {
+      display: none;
+    }
+
+  }
+  .gn-related-parent {
+    border-bottom-width: 2px;
+  }
+  .gn-related-children {
+    background-color: @gn-menubar-background;
   }
   .gn-md-side {
     padding-top: 32px;

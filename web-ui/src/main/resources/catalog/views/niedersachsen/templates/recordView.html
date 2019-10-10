@@ -158,9 +158,28 @@
                  data-title="{{'downloadsAndResources' | translate}}">
             </div>
 
-            <div data-gn-related="mdView.current.record"
+            <!-- <div data-gn-related="mdView.current.record"
                  data-user="user"
                  data-types="parent|children|services|datasets"
+                 data-title="{{'associatedResources' | translate}}">
+            </div> -->
+            <h2 data-translate="">associatedResources</h2>
+            <div data-gn-related="mdView.current.record"
+                 class="gn-related-container"
+                 data-user="user"
+                 data-types="parent"
+                 data-title="{{'associatedResources' | translate}}">
+            </div>
+            <div data-gn-related="mdView.current.record"
+                 class="gn-related-container gn-margin-bottom"
+                 data-user="user"
+                 data-types="children"
+                 data-title="{{'associatedResources' | translate}}">
+            </div>
+            <div data-gn-related="mdView.current.record"
+                 class="gn-related-container"
+                 data-user="user"
+                 data-types="services|datasets"
                  data-title="{{'associatedResources' | translate}}">
             </div>
           </div>
