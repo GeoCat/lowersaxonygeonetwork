@@ -158,28 +158,26 @@
                  data-title="{{'downloadsAndResources' | translate}}">
             </div>
 
-            <!-- <div data-gn-related="mdView.current.record"
-                 data-user="user"
-                 data-types="parent|children|services|datasets"
-                 data-title="{{'associatedResources' | translate}}">
-            </div> -->
-            <h2 data-translate="">associatedResources</h2>
+            <h2 data-translate="" data-ng-if="hasRelations.parent || hasRelations.children || hasRelations.servicedataset">associatedResources</h2>
             <div data-gn-related="mdView.current.record"
                  class="gn-related-container"
                  data-user="user"
                  data-types="parent"
+                 data-has-results="hasRelations.parent"
                  data-title="{{'associatedResources' | translate}}">
             </div>
             <div data-gn-related="mdView.current.record"
                  class="gn-related-container gn-margin-bottom"
                  data-user="user"
                  data-types="children"
+                 data-has-results="hasRelations.children"
                  data-title="{{'associatedResources' | translate}}">
             </div>
             <div data-gn-related="mdView.current.record"
                  class="gn-related-container"
                  data-user="user"
                  data-types="services|datasets"
+                 data-has-results="hasRelations.servicedataset"
                  data-title="{{'associatedResources' | translate}}">
             </div>
           </div>
@@ -257,7 +255,7 @@
               <td>
                 <ul>
                   <li data-ng-repeat="i in mdView.current.record.identifier">
-                    {{i}}
+                    <span data-ng-bind-html="i | linky:'_blank' | newlines"></span>
                   </li>
                 </ul>
               </td>
