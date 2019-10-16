@@ -2356,6 +2356,15 @@
       Trennzeichen getrennt
     </description>
   </element>
+    <!-- ==================================================== -->
+  <element name="gmd:individualName">
+    <label>Individual name</label>
+    <description>Name of the responsible person- surname, given name,
+      title separated by a
+      delimiter
+    </description>
+    <condition>conditional</condition>
+  </element>
   <element name="gmd:organisationName" id="376">
     <label>Organisation</label>
     <help/>
@@ -3794,5 +3803,37 @@
   <element name="gco:upper">
     <label>Upper cardinality</label>
     <description>Upper cardinality</description>
+  </element>
+  <element name="gco:nilReason">
+    <label>Nil reason</label>
+    <description/>
+    <help/>
+    <condition/>
+  </element>
+    <element name="xlink:type">
+    <label>Type of link</label>
+    <description></description>
+  </element>
+    <element name="gmd:name">
+    <label>Name</label>
+    <description/>
+  </element>
+  <element name="gmd:version">
+    <label>Version</label>
+    <description>Version of the format (date, number, etc.)</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="gmd:linkage">
+    <label>Linkage</label>
+    <description>Location (address) for on-line access using a Uniform
+      Resource Locator address or
+      similar addressing scheme such as
+      http://www.statkart.no/isotc211
+    </description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="gmd:locale">
+    <label>Locale</label>
+    <description>Locale</description>
   </element>
 </labels>
