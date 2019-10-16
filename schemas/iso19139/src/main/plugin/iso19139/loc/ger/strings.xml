@@ -23,45 +23,50 @@
   -->
 
 <strings>
-  <understandResource>Information about the dataset</understandResource>
-  <relatedResources>Related services and linked data</relatedResources>
-  <techInfo>Technical information</techInfo>
-  <contactInfo>Contact information</contactInfo>
-  <mdContactInfo>Metadata contact</mdContactInfo>
-  <refDate>Reference date</refDate>
-  <temporalRef>Temporal information</temporalRef>
-  <constraintInfo>Access constraint information</constraintInfo>
-  <xml_iso19139>Save this metadata as an ISO19139 XML file</xml_iso19139>
-  <xml_iso19139Tooai_dc>Save this metadata as an OAI Dublin Core XML file</xml_iso19139Tooai_dc>
+  <understandResource>Informationen zum Datensatz</understandResource>
+  <relatedResources>Verwandte Dienste und verknüpfte Daten</relatedResources>
+  <techInfo>Technische Information</techInfo>
+  <contactInfo>Kontakt Informationen</contactInfo>
+  <mdContactInfo>Metadatenkontakt</mdContactInfo>
+  <refDate>Referenzdatum</refDate>
+  <temporalRef>Zeitliche Information</temporalRef>
+  <constraintInfo>Informationen zu Zugriffsbeschränkungen</constraintInfo>
+  <xml_iso19139>Speichern Sie diese Metadaten als ISO19139-XML-Datei</xml_iso19139>
+  <xml_iso19139Tooai_dc>Speichern Sie diese Metadaten als OAI Dublin Core XML-Datei</xml_iso19139Tooai_dc>
 
   <!-- New strings added for the AngularJS editor -->
   <!-- View and tabs -->
-  <advanced>Full</advanced>
-  <default>Simple</default>
-  <simple>Simple</simple>
+  <advanced>Voll</advanced>
+  <default>Einfach</default>
+  <simple>Einfach</simple>
   <inspire>INSPIRE</inspire>
   <inspire_sds>SDS</inspire_sds>
-  <overviews>Overviews</overviews>
+  <overviews>Übersichten</overviews>
   <metadataInXML>XML</metadataInXML>
-  <providedBy>Provided by</providedBy>
-  <shareOnSocialSite>Share on social sites</shareOnSocialSite>
-  <viewMode>Views</viewMode>
+  <providedBy>Zur Verfügung gestellt von</providedBy>
+  <shareOnSocialSite>Auf sozialen Sites teilen</shareOnSocialSite>
+  <viewMode>Ansichten</viewMode>
+  <linkToPortal>Zugang zum Portal</linkToPortal>
+  <linkToPortal-help>Lesen Sie hier die vollständigen Details und den Zugriff auf die Daten.</linkToPortal-help>
+  <citationProposal>Zitiervorschlag</citationProposal>
+  <citationProposal-help>Dieser Vorschlag wurde automatisch generiert. Überprüfen Sie, ob die Autoren der Metadaten keine benutzerdefinierten Zitierungsanforderungen angegeben haben.</citationProposal-help>
+  <associatedResources>Zugehörige Ressourcen</associatedResources>
 
-  <resource>Resource</resource>
+  <resource>Ressource</resource>
   <xml>XML</xml>
-  <metadata>Metadata</metadata>
-  <identificationInfo>Identification</identificationInfo>
-  <distributionInfo>Distribution</distributionInfo>
-  <dataQualityInfo>Quality</dataQualityInfo>
-  <spatialRepresentationInfo>Spatial rep.</spatialRepresentationInfo>
-  <referenceSystemInfo>Ref. system</referenceSystemInfo>
-  <contentInfo>Content</contentInfo>
-  <portrayalCatalogueInfo>Portrayal</portrayalCatalogueInfo>
-  <metadataConstraints>Md. constraints</metadataConstraints>
-  <metadataMaintenance>Md. maintenance</metadataMaintenance>
+  <metadata>Metadaten</metadata>
+  <identificationInfo>Identifizierung</identificationInfo>
+  <distributionInfo>Verteilung</distributionInfo>
+  <dataQualityInfo>Qualität</dataQualityInfo>
+  <spatialRepresentationInfo>Raumdarstellung</spatialRepresentationInfo>
+  <referenceSystemInfo>Referenzsystem</referenceSystemInfo>
+  <contentInfo>Inhalt</contentInfo>
+  <portrayalCatalogueInfo>Darstellung</portrayalCatalogueInfo>
+  <metadataConstraints>Einschränkungen für Metadaten</metadataConstraints>
+  <metadataMaintenance>Metadatenpflege</metadataMaintenance>
   <applicationSchemaInfo>Schema info</applicationSchemaInfo>
-  <noThesaurusName>Keywords</noThesaurusName>
-  <bboxesSection>Geographic coverage</bboxesSection>
+  <noThesaurusName>Schlüsselwörter</noThesaurusName>
+  <bboxesSection>Geographische Abdeckung</bboxesSection>
 
   <!-- XSD error translation -->
   <invalidElement>Ungültiger Inhalt im Element </invalidElement>
@@ -79,63 +84,62 @@
   <enum3>Mögliche Werte sind: </enum3>
 
   <!-- INSPIRE view labels and help -->
-  <url>Online resource</url>
-  <identifier>Resource identifier</identifier>
-  <rsIdentifier>Projection</rsIdentifier>
-  <referenceDate>Temporal information</referenceDate>
-  <creationDate>Creation date</creationDate>
-  <hierarchyLevel>Hierarchy level</hierarchyLevel>
-  <publicationDate>Publication date</publicationDate>
-  <revisionDate>Revision date</revisionDate>
-  <temporalRangeSection>Temporal extent</temporalRangeSection>
-  <beginPosition>Begin</beginPosition>
-  <endPosition>End</endPosition>
-  <conformity>Conformity</conformity>
-  <conformity_title>Title</conformity_title>
-  <conformity_date>Date</conformity_date>
-  <explanation>Explanation</explanation>
-  <pass>Conformity</pass>
-  <indeterminatePosition>Indeterminate position</indeterminatePosition>
-  <pointOfContact>Contact for the resource</pointOfContact>
-  <metadataPointOfContact>Contact for the metadata</metadataPointOfContact>
-  <organisationName>Organisation name</organisationName>
+  <url>Online-Ressource</url>
+  <identifier>Ressourcenkennung</identifier>
+  <rsIdentifier>Projektion</rsIdentifier>
+  <referenceDate>Zeitliche Information</referenceDate>
+  <creationDate>Erstellungsdatum</creationDate>
+  <hierarchyLevel>Hierarchieebene</hierarchyLevel>
+  <publicationDate>Veröffentlichungsdatum</publicationDate>
+  <revisionDate>Änderungsdatum</revisionDate>
+  <temporalRangeSection>Zeitliche Ausdehnung</temporalRangeSection>
+  <beginPosition>Start</beginPosition>
+  <endPosition>Ende</endPosition>
+  <conformity>Konformität</conformity>
+  <conformity_title>Titel</conformity_title>
+  <conformity_date>Datum</conformity_date>
+  <explanation>Erläuterung</explanation>
+  <pass>Konformität</pass>
+  <indeterminatePosition>Unbestimmte Position</indeterminatePosition>
+  <pointOfContact>Kontakt für die Ressource</pointOfContact>
+  <metadataPointOfContact>Kontakt für die Metadaten</metadataPointOfContact>
+  <organisationName>Name der Organisation</organisationName>
   <electronicMailAddress>Email</electronicMailAddress>
-  <role>Role</role>
-  <encoding>Encoding</encoding>
-  <inspireTheme>INSPIRE themes</inspireTheme>
-  <inspireThemeURI>INSPIRE themes</inspireThemeURI>
+  <role>Rolle</role>
+  <encoding>Codierung</encoding>
+  <inspireTheme>INSPIRE-Themen</inspireTheme>
+  <inspireThemeURI>INSPIRE-Themen</inspireThemeURI>
   <format>Format</format>
-  <format_version>Version</format_version>
-  <format_specification>Specification</format_specification>
-  <lineage>Lineage</lineage>
-  <spatialResolution>Spatial resolution (scale)</spatialResolution>
-  <spatialDistance>Spatial resolution (distance)</spatialDistance>
-  <accessConstraints>Access constraints</accessConstraints>
-  <useConstraints>Use constraints</useConstraints>
-  <useLimitation>Use limitation</useLimitation>
-  <add-resource-id>Compute resource identifier</add-resource-id>
-  <add-resource-idHelp>Compose the resource identifier using the catalog URL and the metadata
-    identifier (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).
+  <format_version>Ausführung</format_version>
+  <format_specification>Spezifikation</format_specification>
+  <lineage>Abstammung</lineage>
+  <spatialResolution>Ortsauflösung (Skala)</spatialResolution>
+  <spatialDistance>Ortsauflösung (Entfernung)</spatialDistance>
+  <accessConstraints>Zugriffsbeschränkungen</accessConstraints>
+  <useConstraints>Verwenden Sie Einschränkungen</useConstraints>
+  <useLimitation>Nutzungseinschränkung</useLimitation>
+  <add-resource-id>Berechnen Sie die Ressourcenkennung</add-resource-id>
+  <add-resource-idHelp>Erstellen Sie die Ressourcen-ID mithilfe der Katalog-URL und der Metadaten-ID (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).
   </add-resource-idHelp>
-  <add-extent-from-geokeywords>Compute extent from keyword</add-extent-from-geokeywords>
-  <add-extent-from-geokeywordsHelp>Analyze each keyword of type place and add matching extent.
+  <add-extent-from-geokeywords>Umfang aus Schlüsselwort berechnen</add-extent-from-geokeywords>
+  <add-extent-from-geokeywordsHelp>Analysieren Sie jedes Keyword vom Typ place und fügen Sie den passenden Umfang hinzu.
   </add-extent-from-geokeywordsHelp>
-  <classificationSection>Classification of data and services</classificationSection>
-  <temporalSection>Temporal reference</temporalSection>
-  <restrictionsSection>Restrictions on access and use</restrictionsSection>
-  <metadataSection>Metadata information</metadataSection>
-  <responsibleOrganisationSection>Responsible organization (s)</responsibleOrganisationSection>
-  <qualityAndValiditySection>Quality and validity</qualityAndValiditySection>
-  <spatialRepresentationType>Spatial representation type</spatialRepresentationType>
-  <topicCategory>Topic category code</topicCategory>
-  <metadataLanguage>Metadata language</metadataLanguage>
+  <classificationSection>Klassifizierung von Daten und Diensten</classificationSection>
+  <temporalSection>Zeitlicher Bezug</temporalSection>
+  <restrictionsSection>Zugangs- und Nutzungsbeschränkungen</restrictionsSection>
+  <metadataSection>Metadateninformationen</metadataSection>
+  <responsibleOrganisationSection>Verantwortliche Organisationen</responsibleOrganisationSection>
+  <qualityAndValiditySection>Qualität und Gültigkeit</qualityAndValiditySection>
+  <spatialRepresentationType>Art der räumlichen Darstellung</spatialRepresentationType>
+  <topicCategory>Code der Themenkategorie</topicCategory>
+  <metadataLanguage>Metadatensprache</metadataLanguage>
   <inspireServiceTaxonomy>INSPIRE Service Taxonomy</inspireServiceTaxonomy>
-  <otherConstraints>Other constraints</otherConstraints>
-  <operatesOn>Coupled resource</operatesOn>
-  <extent>Geographic bounding box</extent>
-  <freeTextKeywords>Other keywords</freeTextKeywords>
+  <otherConstraints>Andere Einschränkungen</otherConstraints>
+  <operatesOn>Gekoppelte Ressource</operatesOn>
+  <extent>Geografischer Begrenzungsrahmen</extent>
+  <freeTextKeywords>Andere Schlüsselwörter</freeTextKeywords>
 
-  <addCrs>Projection</addCrs>
+  <addCrs>Projektion</addCrs>
   <addCrs4936>ETRS89-XYZ</addCrs4936>
   <addCrs4937>ETRS89-GRS80h</addCrs4937>
   <addCrs4258>ETRS89-GRS80</addCrs4258>
@@ -160,68 +164,66 @@
 
   <!-- String for INSPIRE SDS tab -->
 
-  <inspire_sds_cc1>Conformance class 1: invocable</inspire_sds_cc1>
-  <inspire_sds_cc2>Conformance class 2: interoperable</inspire_sds_cc2>
-  <inspire_sds_cc3>Conformance class 3: harmonized</inspire_sds_cc3>
+  <inspire_sds_cc1>Konformitätsklasse 1: aufrufbar</inspire_sds_cc1>
+  <inspire_sds_cc2>Konformitätsklasse 2: interoperabel</inspire_sds_cc2>
+  <inspire_sds_cc3>Konformitätsklasse 3: harmonisiert</inspire_sds_cc3>
 
-  <sds-category>Category</sds-category>
-  <inspire_add_pass>Add pass element</inspire_add_pass>
-  <sds-add-dataquality>Add DataQuality element</sds-add-dataquality>
-  <sds-add-dataqualityHelp>TG4: For each spatial data service, there shall be one and only one set
-    of quality information (dataQualityInfo element) scoped to “service”.
+  <sds-category>Kategorie</sds-category>
+  <inspire_add_pass>Pass-Element hinzufügen</inspire_add_pass>
+  <sds-add-dataquality>Fügen Sie das DataQuality-Element hinzu</sds-add-dataquality>
+  <sds-add-dataqualityHelp>TG4: Für jeden Geodatendienst muss ein und nur ein Satz von Qualitätsinformationen (dataQualityInfo-Element) vorhanden sein, 
+                           die dem Bereich „Dienst“ zugeordnet sind.
   </sds-add-dataqualityHelp>
-  <sds-add-tech-spec>Add a technical specification</sds-add-tech-spec>
-  <sds-add-tech-specHelp>TG8: The Specification metadata element shall at least refer to or contain
-    one technical specification to which the invocable spatial data service fully conforms,
-    providing all the necessary technical elements, to actually invoke the service and enable its
-    usage.
+  <sds-add-tech-spec>Fügen Sie eine technische Spezifikation hinzu</sds-add-tech-spec>
+  <sds-add-tech-specHelp>TG8: Das Specification-Metadatenelement muss sich mindestens auf eine technische 
+                         Spezifikation beziehen oder diese enthalten, der der aufrufbare Geodatendienst 
+                         vollständig entspricht, und alle erforderlichen technischen Elemente bereitstellen, 
+                         um den Dienst tatsächlich aufzurufen und seine Nutzung zu ermöglichen.
   </sds-add-tech-specHelp>
-  <sds-tech-spec>Technical specification</sds-tech-spec>
-  <conformity_desc>Tech spec title</conformity_desc>
-  <conformity_linkage>Tech spec URL</conformity_linkage>
+  <sds-tech-spec>Technische Spezifikation</sds-tech-spec>
+  <conformity_desc>Titel der technischen Spezifikation</conformity_desc>
+  <conformity_linkage>Technische Spezifikations-URL</conformity_linkage>
 
 
-  <sds-section-qos>Quality of Service</sds-section-qos>
-  <sds-add-qualityofservice>Add missing Quality of Service criteria</sds-add-qualityofservice>
-  <sds-add-qualityofserviceHelp>INSPIRE SDS requires three quality of service criteria to be
-    reported in the metadata: Availability, Performance and Capacity. This button will add the
-    missing criteria.
+  <sds-section-qos>Servicequalität</sds-section-qos>
+  <sds-add-qualityofservice>Fügen Sie fehlende Quality of Service-Kriterien hinzu</sds-add-qualityofservice>
+  <sds-add-qualityofserviceHelp>Für INSPIRE SDS müssen in den Metadaten drei Dienstgütekriterien angegeben werden: 
+                                Verfügbarkeit, Leistung und Kapazität. Diese Schaltfläche fügt die fehlenden 
+                                Kriterien hinzu.
   </sds-add-qualityofserviceHelp>
-  <qos_measure>Measure:</qos_measure>
+  <qos_measure>Messen:</qos_measure>
   <qos_uom>UOM</qos_uom>
-  <qos_description>Description</qos_description>
-  <qos_value>Value</qos_value>
-  <sds-section-crs>Coordinate reference system</sds-section-crs>
+  <qos_description>Beschreibung</qos_description>
+  <qos_value>Wert</qos_value>
+  <sds-section-crs>Koordinatenbezugssystem</sds-section-crs>
 
-  <sds-fix-category>Fix the Category element</sds-fix-category>
-  <sds-fix-categoryHelp>(Rec1) Replace gco:CharacterString with gmx:Anchor in the description
-    metadata element.
+  <sds-fix-category>Korrigieren Sie das Category-Element</sds-fix-category>
+  <sds-fix-categoryHelp>(Rec1) Ersetzen Sie gco:CharacterString durch gmx:Anchor im Metadatenelement description.
   </sds-fix-categoryHelp>
 
-  <sds-accesspoint>Access Point URL</sds-accesspoint>
-  <sds-add-accesspoint>Add Access Point</sds-add-accesspoint>
+  <sds-accesspoint>Zugriffspunkt-URL</sds-accesspoint>
+  <sds-add-accesspoint>Zugangspunkt hinzufügen</sds-add-accesspoint>
 
-  <sds-endpoint>Endpoint URL</sds-endpoint>
-  <sds-add-endpoint>Add Endpoint</sds-add-endpoint>
+  <sds-endpoint>Endpunkt-URL</sds-endpoint>
+  <sds-add-endpoint>Endpunkt hinzufügen</sds-add-endpoint>
 
-  <sds-addNoConstraints>No Limitation</sds-addNoConstraints>
-  <sds-addNoConstraintsHelp>Add an element that documents that there are no limitation for this
-    service.
+  <sds-addNoConstraints>Keine Einschränkungen</sds-addNoConstraints>
+  <sds-addNoConstraintsHelp>Fügen Sie ein Element hinzu, das dokumentiert, dass für diesen Dienst keine Einschränkungen bestehen.
   </sds-addNoConstraintsHelp>
-  <sds-addUnknownConstraints>Unknown Limitation</sds-addUnknownConstraints>
-  <sds-addConstraints>Customizable constraints</sds-addConstraints>
+  <sds-addUnknownConstraints>Unbekannte Einschränkung</sds-addUnknownConstraints>
+  <sds-addConstraints>Anpassbare Einschränkungen</sds-addConstraints>
 
   <sds>
-    <noConditionsApply>No conditions apply</noConditionsApply>
-    <conditionsUnknown>Conditions unknown</conditionsUnknown>
+    <noConditionsApply>Es gelten keine Bedingungen</noConditionsApply>
+    <conditionsUnknown>Bedingungen unbekannt</conditionsUnknown>
   </sds>
 
-  <sds-limitation>Limitation</sds-limitation>
+  <sds-limitation>Verjährung</sds-limitation>
 
-  <sds-section-custodian>Responsible custodian</sds-section-custodian>
-  <sds-addOperation>Add Operation</sds-addOperation>
+  <sds-section-custodian>Verantwortlicher Verwalter</sds-section-custodian>
+  <sds-addOperation>Operation hinzufügen</sds-addOperation>
 
   <trueValue>Ja</trueValue>
   <falseValue>Nein</falseValue>
-  <nilValue>Undefined</nilValue>
+  <nilValue>Nullwert</nilValue>
 </strings>
