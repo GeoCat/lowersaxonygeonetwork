@@ -2286,14 +2286,12 @@
       Ressource gehört
     </description>
   </element>
-  <element name="gmd:spatialRepresentationType" context="gmd:MD_Identification"
-           id="37">
+  <element name="gmd:spatialRepresentationType" id="37">
     <label>Räumliche Darstellungsart</label>
     <help/>
     <condition/>
     <description>Methode, mit der geografische Informationen räumlich
-      dargestellt
-      werden
+      dargestellt werden
     </description>
   </element>
   <element name="gmd:otherCitationDetails" context="gmd:CI_Citation"
@@ -3712,6 +3710,10 @@
       <option value="TEXT">TEXT</option>
     </helper>
   </element>
+  <element name="gco:CharacterString">
+    <label>Text</label>
+    <description/>
+  </element>
   <element name="gmx:FileName">
     <label>File name</label>
     <description>File name and source URL.</description>
@@ -3835,5 +3837,19 @@
   <element name="gmd:locale">
     <label>Locale</label>
     <description>Locale</description>
+  </element>
+  <element name="indeterminatePosition">
+    <label>Indeterminate position</label>
+    <description></description>
+  </element>
+  <element name="frame">
+    <label>Frame</label>
+    <description>Frame attribute provides a URI reference that identifies a description of the
+      reference system
+    </description>
+  </element>
+  <element name="calendarEraName">
+    <label>Name of the calendar era</label>
+    <description></description>
   </element>
 </labels>
