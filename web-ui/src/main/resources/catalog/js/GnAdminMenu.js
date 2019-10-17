@@ -28,12 +28,6 @@
 
   module.factory('gnAdminMenu', function() {
     var userAdminMenu = [
-      {name: 'harvesters', route: '#harvest',
-        classes: 'btn-primary', icon: 'fa-cloud-download'},
-      {name: 'statisticsAndStatus', route: '#dashboard',
-        classes: 'btn-success', icon: 'fa-dashboard'},
-      {name: 'reports', route: '#reports',
-        classes: 'btn-success', icon: 'fa-file-text-o'},
       {name: 'usersAndGroups', route: '#organization',
         classes: 'btn-default', icon: 'fa-group'}
     ];

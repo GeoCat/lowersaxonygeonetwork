@@ -110,7 +110,7 @@ public class HarvestersApi {
         method = RequestMethod.POST
     )
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    @PreAuthorize("hasRole('UserAdmin')")
+    @PreAuthorize("hasRole('Administrator')")
     @ApiResponses(value = {
         @ApiResponse(code = 204, message = "Harvester records transfered to new source."),
         @ApiResponse(code = 404, message = ApiParams.API_RESPONSE_RESOURCE_NOT_FOUND),

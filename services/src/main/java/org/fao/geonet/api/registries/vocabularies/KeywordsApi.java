@@ -539,7 +539,7 @@ public class KeywordsApi {
             @ApiResponse(code = 403, message = ApiParams.API_RESPONSE_NOT_ALLOWED_ONLY_USER_ADMIN),
             @ApiResponse(code = 404, message = ApiParams.API_RESPONSE_RESOURCE_NOT_FOUND)
         })
-        @PreAuthorize("hasRole('UserAdmin')")
+        @PreAuthorize("hasRole('Administrator')")
         @ResponseBody
         @ResponseStatus(HttpStatus.OK)
     public void deleteThesaurus(

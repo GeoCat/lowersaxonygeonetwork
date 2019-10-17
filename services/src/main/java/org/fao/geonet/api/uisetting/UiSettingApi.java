@@ -100,7 +100,7 @@ public class UiSettingApi {
         @ApiResponse(code = 201, message = "UI configuration created. Return the new UI configuration identifier."),
         @ApiResponse(code = 403, message = ApiParams.API_RESPONSE_NOT_ALLOWED_ONLY_USER_ADMIN)
     })
-    @PreAuthorize("hasRole('UserAdmin')")
+    @PreAuthorize("hasRole('Administrator')")
     public ResponseEntity<String> putUiConfiguration(
         @ApiParam(
             name = "uiConfiguration"
@@ -169,7 +169,7 @@ public class UiSettingApi {
     @RequestMapping(
         value = "/{uiIdentifier}",
         method = RequestMethod.PUT)
-    @PreAuthorize("hasRole('UserAdmin')")
+    @PreAuthorize("hasRole('Administrator')")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @ApiResponses(value = {
         @ApiResponse(code = 204, message = "UI configuration updated."),
@@ -216,7 +216,7 @@ public class UiSettingApi {
         @ApiResponse(code = 404, message = "UI Configuration not found."),
         @ApiResponse(code = 403, message = ApiParams.API_RESPONSE_NOT_ALLOWED_ONLY_USER_ADMIN)
     })
-    @PreAuthorize("hasRole('UserAdmin')")
+    @PreAuthorize("hasRole('Administrator')")
     public ResponseEntity deleteUiConfiguration(
         @ApiParam(
             value = "UI configuration identifier",
