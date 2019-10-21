@@ -107,6 +107,7 @@
     <facet name="standard" indexKey="_schema" label="standards"/>
     <facet name="subTemplateType" indexKey="_root" label="subTemplateTypes"/>
     <facet name="groupOwner" indexKey="_groupOwner" label="groupOwners"/>
+    <facet name="owner" indexKey="_owner" label="owner"/>
     <facet name="publishedForGroup" indexKey="_groupPublished" label="publishedForGroup"/>
 	  <facet name="isPublishedToAll" indexKey="_isPublishedToAll" label="isPublishedToAll" />
     <!--
@@ -171,6 +172,8 @@
       <item facet="isValid" max="3" sortBy="value" translator="apploc:validStatus-"/>
       <item facet="groupOwner" max="199" sortBy="value"
             translator="db:org.fao.geonet.repository.GroupRepository:findOne:int"/>
+      <item facet="owner" max="199" sortBy="value"
+            translator="db:org.fao.geonet.repository.UserRepository:findOne:int"/>
       <item facet="publishedForGroup" max="199" sortBy="value"
             translator="db:org.fao.geonet.repository.GroupRepository:findOneByName"/>
       <item facet="standard" max="15" sortBy="value"/>

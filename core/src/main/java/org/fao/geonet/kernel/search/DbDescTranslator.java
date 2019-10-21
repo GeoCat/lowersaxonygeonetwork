@@ -23,20 +23,23 @@
 
 package org.fao.geonet.kernel.search;
 
-import com.google.common.base.Optional;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.List;
 
 import org.fao.geonet.ApplicationContextHolder;
 import org.fao.geonet.constants.Geonet;
 import org.fao.geonet.domain.Localized;
+import org.fao.geonet.domain.User;
+import org.fao.geonet.domain.UserLocalizedWrapper;
+import org.fao.geonet.repository.UserRepository;
 import org.fao.geonet.utils.Log;
 import org.jdom.JDOMException;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import com.google.common.base.Optional;
 
 /**
  * Translates keys using a Repository class and property from the retrieved entity.
@@ -127,7 +130,11 @@ public class DbDescTranslator implements Translator {
             if (method.getName().equals(this._methodName) && method.getParameterTypes().length == 1) {
                 try {
                     if (_parameterType.equals("int")) {
-                        entity = (Localized) method.invoke(repository, Integer.valueOf(key));
+                        if(method.invoke(repository, Integer.valueOf(key)) instanceof User) {
+                            entity = new UserLocalizedWrapper((User) method.invoke(repository, Integer.valueOf(key)));
+                        } else {
+                            entity = (Localized) method.invoke(repository, Integer.valueOf(key));
+                        }
                     } else if (_parameterType.equals("long")) {
                         entity = (Localized) method.invoke(repository, Long.valueOf(key));
                     } else if (_parameterType.equals("double")) {
@@ -148,7 +155,11 @@ public class DbDescTranslator implements Translator {
                 }
                 if (entity == null) {
                     try {
-                        entity = (Localized) method.invoke(repository, key);
+                        if(method.invoke(repository, Integer.valueOf(key)) instanceof User) {
+                            entity = new UserLocalizedWrapper((User) method.invoke(repository, Integer.valueOf(key)));
+                        } else {
+                            entity = (Localized) method.invoke(repository, key);
+                        }
                     } catch (java.lang.IllegalArgumentException e) {
                         // Call to the method with wrong argument type.
                     }
@@ -177,4 +188,5 @@ public class DbDescTranslator implements Translator {
             return null;
         }
     }
+
 }
