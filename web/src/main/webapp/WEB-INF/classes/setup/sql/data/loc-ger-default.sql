@@ -538,8 +538,8 @@ INSERT INTO StatusValuesDes  (iddes, langid, label) VALUES (62,'ger','Record imp
 INSERT INTO StatusValuesDes  (iddes, langid, label) VALUES (100,'ger','DOI creation requested.');
 
 
-INSERT INTO SelectionsDes (iddes, langid, label) VALUES (0,'ger','Preferred records');
-INSERT INTO SelectionsDes (iddes, langid, label) VALUES (1,'ger','Watch list');
+INSERT INTO SelectionsDes (iddes, langid, label) VALUES (0,'ger','Bevorzugte Datensätze');
+INSERT INTO SelectionsDes (iddes, langid, label) VALUES (1,'ger','Merkzettel');
 
 
 
